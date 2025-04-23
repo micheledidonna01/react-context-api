@@ -1,23 +1,13 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import CardItem from "../components/post/PostItem";
-import axios from "axios";
 import Footer from "../components/Footer";
-
+import { useContext } from "react";
+import ContextPosts from "../context/ContextPosts";
 
 
 let Posts = () => {
 
-    const [posts, setPosts] = useState([]);
-    const url = 'https://jsonplaceholder.typicode.com/posts';
-
-    function fetchPosts(){
-        axios.get(url).then(res => setPosts(res.data))
-        .catch(err => console.log(err))
-    }
-
-    console.log(posts);
-
-    useEffect(fetchPosts, []);
+    const {posts} = useContext(ContextPosts);
 
     useEffect(() => {
         console.log('mount component Posts');
