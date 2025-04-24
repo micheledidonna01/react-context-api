@@ -22,8 +22,29 @@ header nav .link:hover {
 
 
 main {
-  height: 500px;
+  min-height: 500px;
+  position: relative;
 }
+
+main .alert {
+  position: fixed;
+  width: 300px;
+  bottom: 0;
+  right: 10px;
+  z-index: 2;
+}
+
+main .alert-success {
+  opacity: 1;
+  transition: opacity 5s ease-in;
+}
+
+main .alert-danger {
+  opacity: 0;
+  transition: opacity 5s ease-in;
+}
+
+
 
 main .container-main {
   height: 100%;
@@ -41,7 +62,7 @@ main .container-btn .icon {
 }
 
 
-.opaco{
+.opaco {
   opacity: 0.5;
 }
 

@@ -28,7 +28,6 @@ let Posts = () => {
             body = {card.body}/>
             )}
         </ul>
-        <Footer />
         </>
     )
 }
